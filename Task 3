@@ -1,0 +1,29 @@
+﻿#define _CRT_SECURE_NO_WARNINGS
+#define _USE_MATH_DEFINES
+#include <locale.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+
+int main() {
+    setlocale(LC_ALL, "RUS");
+
+    double k = 7.0;
+
+    double x;
+    printf("Введите значение x: ");
+    scanf("%lf", &x);
+
+    double a = pow(k + x, 3);           // a = (k + x)^3
+    double b = log10(fabs(k * x));      // b = lg|kx|
+    double y = pow(b, 2) + pow(fabs(a),0.5) ; // y = b^2 + корень(|a|)
+
+    printf("\n=== РЕЗУЛЬТАТЫ ВЫЧИСЛЕНИЙ ===\n");
+    printf("Введенное значение x: %.1f\n", x);
+    printf("Константа k: %.0f\n", k);
+    printf("Вычисленное значение a: %.3f\n", a);
+    printf("Вычисленное значение b: %.3f\n", b);
+    printf("Результат функции y: %.3f\n", y);
+    
+} 
