@@ -1,0 +1,24 @@
+﻿#define _CRT_SECURE_NO_WARNINGS
+#define _USE_MATH_DEFINES
+#include <locale.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <math.h>
+
+int main() {
+    setlocale(LC_ALL, "RUS");
+    double x, y;
+
+    printf("Введите x: ");
+    scanf("%lf", &x);
+    printf("Введите y: ");
+    scanf("%lf", &y);
+
+    double res = sin(pow(x, 0.5 * y)) + pow(y + 8e-4, 1.0 / 5.0);
+
+
+    printf("Ответ: %.3f\n", res);
+
+    return 0;
+}
