@@ -3,27 +3,21 @@
 #include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <math.h>
+#define M_PI            3.14159265358979323846
 
 int main() {
     setlocale(LC_ALL, "RUS");
 
-    double k = 7.0;
+    float grid;
+    float gr;
 
-    double x;
-    printf("Введите значение x: ");
-    scanf("%lf", &x);
+    printf("введите градус:");
+    scanf("%f", &gr);
 
-    double a = pow(k + x, 3);           // a = (k + x)^3
-    double b = log10(fabs(k * x));      // b = lg|kx|
-    double y = pow(b, 2) + pow(fabs(a),0.5) ; // y = b^2 + корень(|a|)
+    float a = gr * M_PI;
+    float perevod = sin(a / 180);
 
-    printf("\n=== РЕЗУЛЬТАТЫ ВЫЧИСЛЕНИЙ ===\n");
-    printf("Введенное значение x: %.1f\n", x);
-    printf("Константа k: %.0f\n", k);
-    printf("Вычисленное значение a: %.3f\n", a);
-    printf("Вычисленное значение b: %.3f\n", b);
-    printf("Результат функции y: %.3f\n", y);
-    
-} 
+    printf("результаты вычислений: %.6f", perevod);
+
+}
